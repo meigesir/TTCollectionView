@@ -25,6 +25,10 @@
 @property (nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
 @property (nonatomic, strong) UIPageControl *pageControl;
 
+@property (nonatomic, strong) NSTimer *repeatTimer;
+
+@property (nonatomic, assign) NSInteger currentPage; // 对应handledArray索引
+
 @end
 
 @implementation TTMInfiniteCarouselView
@@ -73,6 +77,7 @@
         [mutArray addObject:[array firstObject]];
         self.handledArray = [mutArray copy];
         [self.collectionView setContentOffset:CGPointMake(kCarouselWidth, 0) animated:NO];
+        self.currentPage = 1;
     } else {
         self.pageControl.hidden = YES;
         [self.collectionView setContentOffset:CGPointZero animated:NO];
@@ -87,6 +92,46 @@
     }
     
     [self.collectionView reloadData];
+}
+
+#pragma mark - Timer
+
+- (void)startTimer
+{
+    [self stopTimer];
+    self.repeatTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(handleTimer) userInfo:nil repeats:YES];
+}
+
+- (void)stopTimer
+{
+    if (self.repeatTimer) {
+        [self.repeatTimer invalidate];
+        self.repeatTimer = nil;
+    }
+}
+
+- (void)handleTimer
+{
+    if (self.handledArray.count > 1) {
+        if (self.pageControl.currentPage == self.pageControl.numberOfPages - 1) {
+            self.pageControl.currentPage = 0;
+        } else {
+            self.pageControl.currentPage++;
+        }
+        
+        if (self.currentPage >= self.handledArray.count - 2) {
+            [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:++self.currentPage inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+            self.currentPage = 1;
+        } else {
+            if (self.currentPage == 1) {
+                [self.collectionView setContentOffset:CGPointMake(kCarouselWidth, 0) animated:NO];
+            }
+            
+            [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:++self.currentPage inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
+        }
+    } else {
+        [self stopTimer];
+    }
 }
 
 #pragma mark - UICollectionViewDataSource
@@ -132,16 +177,30 @@
             // 第一个，其实显示的是原有数组最后一个元素，然后设置currentPage和默默地跳转到实际的位置
             self.pageControl.currentPage = self.dataArray.count - 1;
             [self.collectionView setContentOffset:CGPointMake(self.dataArray.count * pageWidth, 0) animated:NO];
+            self.currentPage = self.dataArray.count;
         } else if (realPage == self.handledArray.count - 1) {
             // 最后一个，其实显示的是原有数组的第一个元素，然后设置currentPage和默默地跳转到实际的位置
             self.pageControl.currentPage = 0;
             [scrollView setContentOffset:CGPointMake(pageWidth, 0) animated:NO];
+            self.currentPage = 1;
         } else {
             self.pageControl.currentPage = realPage - 1;
+            self.currentPage = realPage;
         }
     } else {
         self.pageControl.currentPage = realPage;
+        self.currentPage = realPage;
     }
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self stopTimer];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    [self startTimer];
 }
 
 #pragma mark - Private

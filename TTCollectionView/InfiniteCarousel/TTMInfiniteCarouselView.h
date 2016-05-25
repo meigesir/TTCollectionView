@@ -52,4 +52,7 @@ typedef NS_ENUM(NSInteger, TTMInfiniteCarouselViewPageControlAlignment) {
 
 - (void)reloadData;
 
+- (void)startTimer;
+- (void)stopTimer;
+
 @end
