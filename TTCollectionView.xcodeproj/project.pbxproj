@@ -15,6 +15,11 @@
 		D75D632A1CF58A9800DEE815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75D63281CF58A9800DEE815 /* LaunchScreen.storyboard */; };
 		D75D63351CF58A9800DEE815 /* TTCollectionViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D75D63341CF58A9800DEE815 /* TTCollectionViewTests.m */; };
 		D75D63401CF58A9800DEE815 /* TTCollectionViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D75D633F1CF58A9800DEE815 /* TTCollectionViewUITests.m */; };
+		D75D63501CF5991700DEE815 /* TTMInfiniteCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75D634F1CF5991700DEE815 /* TTMInfiniteCarouselView.m */; };
+		D75D63561CF59DFC00DEE815 /* TTMInfiniteCarouselItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D75D63541CF59DFC00DEE815 /* TTMInfiniteCarouselItem.m */; };
+		D75D63571CF59DFC00DEE815 /* TTMInfiniteCarouselItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75D63551CF59DFC00DEE815 /* TTMInfiniteCarouselItem.xib */; };
+		D75D635A1CF5B13100DEE815 /* 2_750x300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D75D63591CF5B13100DEE815 /* 2_750x300.jpg */; };
+		D75D635C1CF5B15800DEE815 /* 1_750x300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D75D635B1CF5B15800DEE815 /* 1_750x300.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,13 @@
 		D75D633B1CF58A9800DEE815 /* TTCollectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TTCollectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75D633F1CF58A9800DEE815 /* TTCollectionViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTCollectionViewUITests.m; sourceTree = "<group>"; };
 		D75D63411CF58A9800DEE815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D75D634E1CF5991700DEE815 /* TTMInfiniteCarouselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMInfiniteCarouselView.h; sourceTree = "<group>"; };
+		D75D634F1CF5991700DEE815 /* TTMInfiniteCarouselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMInfiniteCarouselView.m; sourceTree = "<group>"; };
+		D75D63531CF59DFC00DEE815 /* TTMInfiniteCarouselItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMInfiniteCarouselItem.h; sourceTree = "<group>"; };
+		D75D63541CF59DFC00DEE815 /* TTMInfiniteCarouselItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMInfiniteCarouselItem.m; sourceTree = "<group>"; };
+		D75D63551CF59DFC00DEE815 /* TTMInfiniteCarouselItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTMInfiniteCarouselItem.xib; sourceTree = "<group>"; };
+		D75D63591CF5B13100DEE815 /* 2_750x300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2_750x300.jpg; sourceTree = "<group>"; };
+		D75D635B1CF5B15800DEE815 /* 1_750x300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1_750x300.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,8 @@
 		D75D63191CF58A9800DEE815 /* TTCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				D75D63581CF5B02500DEE815 /* Resources */,
+				D75D634D1CF5982900DEE815 /* InfiniteCarousel */,
 				D75D631D1CF58A9800DEE815 /* AppDelegate.h */,
 				D75D631E1CF58A9800DEE815 /* AppDelegate.m */,
 				D75D63201CF58A9800DEE815 /* ViewController.h */,
@@ -138,6 +152,27 @@
 				D75D63411CF58A9800DEE815 /* Info.plist */,
 			);
 			path = TTCollectionViewUITests;
+			sourceTree = "<group>";
+		};
+		D75D634D1CF5982900DEE815 /* InfiniteCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				D75D634E1CF5991700DEE815 /* TTMInfiniteCarouselView.h */,
+				D75D634F1CF5991700DEE815 /* TTMInfiniteCarouselView.m */,
+				D75D63531CF59DFC00DEE815 /* TTMInfiniteCarouselItem.h */,
+				D75D63541CF59DFC00DEE815 /* TTMInfiniteCarouselItem.m */,
+				D75D63551CF59DFC00DEE815 /* TTMInfiniteCarouselItem.xib */,
+			);
+			path = InfiniteCarousel;
+			sourceTree = "<group>";
+		};
+		D75D63581CF5B02500DEE815 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D75D635B1CF5B15800DEE815 /* 1_750x300.jpg */,
+				D75D63591CF5B13100DEE815 /* 2_750x300.jpg */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,8 +278,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75D635C1CF5B15800DEE815 /* 1_750x300.jpg in Resources */,
+				D75D635A1CF5B13100DEE815 /* 2_750x300.jpg in Resources */,
 				D75D632A1CF58A9800DEE815 /* LaunchScreen.storyboard in Resources */,
 				D75D63271CF58A9800DEE815 /* Assets.xcassets in Resources */,
+				D75D63571CF59DFC00DEE815 /* TTMInfiniteCarouselItem.xib in Resources */,
 				D75D63251CF58A9800DEE815 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,9 +308,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D75D63501CF5991700DEE815 /* TTMInfiniteCarouselView.m in Sources */,
 				D75D63221CF58A9800DEE815 /* ViewController.m in Sources */,
 				D75D631F1CF58A9800DEE815 /* AppDelegate.m in Sources */,
 				D75D631C1CF58A9800DEE815 /* main.m in Sources */,
+				D75D63561CF59DFC00DEE815 /* TTMInfiniteCarouselItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
