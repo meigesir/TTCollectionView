@@ -19,6 +19,7 @@
 @interface TTMInfiniteCarouselView () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) NSArray *dataArray;
+@property (nonatomic, strong) NSArray *handledArray;// 为了无限轮播，处理之后的数据
 
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic, strong) UICollectionViewFlowLayout *flowLayout;
@@ -52,15 +53,39 @@
 
 - (void)updateWithDataArray:(NSArray *)array
 {
+    NSInteger count = array.count;
+    
+    if (count == 0) {
+        return;
+    }
+    
     self.dataArray = array;
     
-    self.pageControl.numberOfPages = self.dataArray.count;
+    self.pageControl.numberOfPages = count;
     
     [self p_updatePageControlFrame];
+    
+    if (count > 1) {
+        self.pageControl.hidden = NO;
+        /** 做无限滚动效果处理:第一个前面放数组里面最后一个数据，最后一个后面放数组里面第一个数据，切换之后，迅速设置setContentOffset，从而无限滚动 **/
+        NSMutableArray *mutArray = [array mutableCopy];
+        [mutArray insertObject:[array lastObject] atIndex:0];
+        [mutArray addObject:[array firstObject]];
+        self.handledArray = [mutArray copy];
+        [self.collectionView setContentOffset:CGPointMake(kCarouselWidth, 0) animated:NO];
+    } else {
+        self.pageControl.hidden = YES;
+        [self.collectionView setContentOffset:CGPointZero animated:NO];
+        self.handledArray = [array copy];
+    }
 }
 
 - (void)reloadData
 {
+    if (self.dataArray.count == 0) {
+        return;
+    }
+    
     [self.collectionView reloadData];
 }
 
@@ -68,7 +93,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.dataArray.count;
+    return self.handledArray.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
@@ -84,7 +109,7 @@
 - (void)configureCell:(TTMInfiniteCarouselItem *)cell
    forItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [cell updateWithDict:self.dataArray[indexPath.row]];
+    [cell updateWithDict:self.handledArray[indexPath.row]];
 }
 
 #pragma mark - UICollectionViewDelegateFlowLayout
@@ -96,16 +121,27 @@
 
 #pragma mark - UIScrollViewDelegate
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    int numberOfPages = (int)self.pageControl.numberOfPages;
+    /*计算应该显示第几个点(vasualPage):先计算出实际上是第几页:realPage*/
+    CGFloat pageWidth = kCarouselWidth;
+    NSInteger realPage = floor((scrollView.contentOffset.x) / pageWidth + 0.5);
     
-    if (numberOfPages == 0) {
-        return;
+    if (self.dataArray.count > 1) {
+        if (realPage == 0) {
+            // 第一个，其实显示的是原有数组最后一个元素，然后设置currentPage和默默地跳转到实际的位置
+            self.pageControl.currentPage = self.dataArray.count - 1;
+            [self.collectionView setContentOffset:CGPointMake(self.dataArray.count * pageWidth, 0) animated:NO];
+        } else if (realPage == self.handledArray.count - 1) {
+            // 最后一个，其实显示的是原有数组的第一个元素，然后设置currentPage和默默地跳转到实际的位置
+            self.pageControl.currentPage = 0;
+            [scrollView setContentOffset:CGPointMake(pageWidth, 0) animated:NO];
+        } else {
+            self.pageControl.currentPage = realPage - 1;
+        }
+    } else {
+        self.pageControl.currentPage = realPage;
     }
-    
-    int page = (int)(scrollView.contentOffset.x / kCarouselWidth + 0.5) % numberOfPages;
-    self.pageControl.currentPage = page;
 }
 
 #pragma mark - Private
