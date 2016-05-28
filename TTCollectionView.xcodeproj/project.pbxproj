@@ -23,6 +23,7 @@
 		D75D635E1CF5EF7A00DEE815 /* 3_750x300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D75D635D1CF5EF7A00DEE815 /* 3_750x300.jpg */; };
 		D75D63601CF5EFBD00DEE815 /* 4_750x300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D75D635F1CF5EFBD00DEE815 /* 4_750x300.jpg */; };
 		D75D63621CF5F0C800DEE815 /* 5_750x300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D75D63611CF5F0C800DEE815 /* 5_750x300.jpg */; };
+		D7D5E8E91CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D5E8E81CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,8 @@
 		D75D635D1CF5EF7A00DEE815 /* 3_750x300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3_750x300.jpg; sourceTree = "<group>"; };
 		D75D635F1CF5EFBD00DEE815 /* 4_750x300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4_750x300.jpg; sourceTree = "<group>"; };
 		D75D63611CF5F0C800DEE815 /* 5_750x300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5_750x300.jpg; sourceTree = "<group>"; };
+		D7D5E8E71CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
+		D7D5E8E81CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +122,7 @@
 		D75D63191CF58A9800DEE815 /* TTCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				D7D5E8E61CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout */,
 				D75D63581CF5B02500DEE815 /* Resources */,
 				D75D634D1CF5982900DEE815 /* InfiniteCarousel */,
 				D75D631D1CF58A9800DEE815 /* AppDelegate.h */,
@@ -182,6 +186,15 @@
 				D75D63591CF5B13100DEE815 /* 2_750x300.jpg */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D7D5E8E61CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D7D5E8E71CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.h */,
+				D7D5E8E81CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m */,
+			);
+			path = CHTCollectionViewWaterfallLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +334,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D75D63501CF5991700DEE815 /* TTMInfiniteCarouselView.m in Sources */,
+				D7D5E8E91CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				D75D63221CF58A9800DEE815 /* ViewController.m in Sources */,
 				D75D631F1CF58A9800DEE815 /* AppDelegate.m in Sources */,
 				D75D631C1CF58A9800DEE815 /* main.m in Sources */,
