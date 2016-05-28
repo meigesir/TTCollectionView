@@ -76,11 +76,11 @@
         [mutArray insertObject:[array lastObject] atIndex:0];
         [mutArray addObject:[array firstObject]];
         self.handledArray = [mutArray copy];
-        [self.collectionView setContentOffset:CGPointMake(kCarouselWidth, 0) animated:NO];
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
         self.currentPage = 1;
     } else {
         self.pageControl.hidden = YES;
-        [self.collectionView setContentOffset:CGPointZero animated:NO];
+        [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
         self.handledArray = [array copy];
     }
 }
@@ -124,7 +124,7 @@
             self.currentPage = 1;
         } else {
             if (self.currentPage == 1) {
-                [self.collectionView setContentOffset:CGPointMake(kCarouselWidth, 0) animated:NO];
+                [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
             }
             
             [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:++self.currentPage inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
@@ -176,12 +176,12 @@
         if (realPage == 0) {
             // 第一个，其实显示的是原有数组最后一个元素，然后设置currentPage和默默地跳转到实际的位置
             self.pageControl.currentPage = self.dataArray.count - 1;
-            [self.collectionView setContentOffset:CGPointMake(self.dataArray.count * pageWidth, 0) animated:NO];
             self.currentPage = self.dataArray.count;
+            [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:self.currentPage inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
         } else if (realPage == self.handledArray.count - 1) {
             // 最后一个，其实显示的是原有数组的第一个元素，然后设置currentPage和默默地跳转到实际的位置
             self.pageControl.currentPage = 0;
-            [scrollView setContentOffset:CGPointMake(pageWidth, 0) animated:NO];
+            [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionNone animated:NO];
             self.currentPage = 1;
         } else {
             self.pageControl.currentPage = realPage - 1;
