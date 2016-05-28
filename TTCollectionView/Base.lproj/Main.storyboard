@@ -100,6 +100,9 @@
                                                 <constraint firstItem="t67-nz-4hN" firstAttribute="top" secondItem="nv7-rZ-pxW" secondAttribute="topMargin" constant="-8" id="zNB-ct-935"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="iqF-iI-ejz" kind="show" id="Of4-df-FW0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -134,6 +137,61 @@
                 <tapGestureRecognizer id="PZG-hv-4sc"/>
             </objects>
             <point key="canvasLocation" x="-67" y="-142"/>
+        </scene>
+        <!--瀑布流-->
+        <scene sceneID="bbh-sA-qFo">
+            <objects>
+                <viewController id="iqF-iI-ejz" customClass="WaterFallViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gmp-fi-1Xe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Anu-If-92B" customClass="CHTCollectionViewWaterfallLayout">
+                            <size key="itemSize" width="120" height="120"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WaterFallCollectionViewCell" id="lGT-A5-b2t" customClass="WaterFallCollectionViewCell">
+                                <rect key="frame" x="10" y="74" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gkc-Q2-b26">
+                                            <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="gkc-Q2-b26" firstAttribute="centerY" secondItem="lGT-A5-b2t" secondAttribute="centerY" id="G2Z-1o-gfh"/>
+                                    <constraint firstItem="gkc-Q2-b26" firstAttribute="top" secondItem="lGT-A5-b2t" secondAttribute="topMargin" constant="-8" id="cE0-2N-CE2"/>
+                                    <constraint firstItem="gkc-Q2-b26" firstAttribute="centerX" secondItem="lGT-A5-b2t" secondAttribute="centerX" id="em2-So-YOq"/>
+                                    <constraint firstItem="gkc-Q2-b26" firstAttribute="leading" secondItem="lGT-A5-b2t" secondAttribute="leadingMargin" constant="-8" id="ops-E4-Ph7"/>
+                                </constraints>
+                                <size key="customSize" width="120" height="120"/>
+                                <connections>
+                                    <outlet property="imageView" destination="gkc-Q2-b26" id="K7K-An-ZIS"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="iqF-iI-ejz" id="i2A-mW-1x3"/>
+                            <outlet property="delegate" destination="iqF-iI-ejz" id="US6-Vr-sGr"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="瀑布流" id="BvP-dx-ZPs"/>
+                    <connections>
+                        <outlet property="collectionView" destination="gmp-fi-1Xe" id="wWg-jj-dTy"/>
+                        <outlet property="waterFallLayout" destination="Anu-If-92B" id="BqI-0t-0CI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G5A-As-dgW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="535"/>
         </scene>
     </scenes>
 </document>
