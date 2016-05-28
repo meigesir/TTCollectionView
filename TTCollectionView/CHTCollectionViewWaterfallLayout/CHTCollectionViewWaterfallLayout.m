@@ -34,8 +34,7 @@ NSString *const CHTCollectionElementKindSectionFooter = @"CHTCollectionElementKi
 static const NSInteger unionSize = 20;
 
 static CGFloat CHTFloorCGFloat(CGFloat value) {
-  CGFloat scale = [UIScreen mainScreen].scale;
-  return floor(value * scale) / scale;
+  return floor(value * 10) / 10;
 }
 
 #pragma mark - Public Accessors
