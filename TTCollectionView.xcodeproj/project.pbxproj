@@ -468,6 +468,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TTCollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tt.TTCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -479,6 +480,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TTCollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tt.TTCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -550,6 +552,7 @@
 				D75D63461CF58A9800DEE815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D75D63471CF58A9800DEE815 /* Build configuration list for PBXNativeTarget "TTCollectionViewTests" */ = {
 			isa = XCConfigurationList;
@@ -558,6 +561,7 @@
 				D75D63491CF58A9800DEE815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D75D634A1CF58A9800DEE815 /* Build configuration list for PBXNativeTarget "TTCollectionViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -566,6 +570,7 @@
 				D75D634C1CF58A9800DEE815 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
