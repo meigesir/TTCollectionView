@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D75D631C1CF58A9800DEE815 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D75D631B1CF58A9800DEE815 /* main.m */; };
 		D75D631F1CF58A9800DEE815 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D75D631E1CF58A9800DEE815 /* AppDelegate.m */; };
-		D75D63221CF58A9800DEE815 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D75D63211CF58A9800DEE815 /* ViewController.m */; };
 		D75D63251CF58A9800DEE815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75D63231CF58A9800DEE815 /* Main.storyboard */; };
 		D75D63271CF58A9800DEE815 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D75D63261CF58A9800DEE815 /* Assets.xcassets */; };
 		D75D632A1CF58A9800DEE815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75D63281CF58A9800DEE815 /* LaunchScreen.storyboard */; };
@@ -24,6 +23,7 @@
 		D75D63601CF5EFBD00DEE815 /* 4_750x300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D75D635F1CF5EFBD00DEE815 /* 4_750x300.jpg */; };
 		D75D63621CF5F0C800DEE815 /* 5_750x300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D75D63611CF5F0C800DEE815 /* 5_750x300.jpg */; };
 		D7D5E8E91CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D5E8E81CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m */; };
+		D7D5E8ED1CF9DA8700B0EE97 /* InfiniteCarouselDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D5E8EC1CF9DA8700B0EE97 /* InfiniteCarouselDemoVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +48,6 @@
 		D75D631B1CF58A9800DEE815 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D75D631D1CF58A9800DEE815 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D75D631E1CF58A9800DEE815 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D75D63201CF58A9800DEE815 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D75D63211CF58A9800DEE815 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D75D63241CF58A9800DEE815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D75D63261CF58A9800DEE815 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D75D63291CF58A9800DEE815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -72,6 +70,8 @@
 		D75D63611CF5F0C800DEE815 /* 5_750x300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 5_750x300.jpg; sourceTree = "<group>"; };
 		D7D5E8E71CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
 		D7D5E8E81CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
+		D7D5E8EB1CF9DA8700B0EE97 /* InfiniteCarouselDemoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfiniteCarouselDemoVC.h; sourceTree = "<group>"; };
+		D7D5E8EC1CF9DA8700B0EE97 /* InfiniteCarouselDemoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfiniteCarouselDemoVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,13 +122,12 @@
 		D75D63191CF58A9800DEE815 /* TTCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				D7D5E8EA1CF9DA5800B0EE97 /* Demo */,
 				D7D5E8E61CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout */,
 				D75D63581CF5B02500DEE815 /* Resources */,
 				D75D634D1CF5982900DEE815 /* InfiniteCarousel */,
 				D75D631D1CF58A9800DEE815 /* AppDelegate.h */,
 				D75D631E1CF58A9800DEE815 /* AppDelegate.m */,
-				D75D63201CF58A9800DEE815 /* ViewController.h */,
-				D75D63211CF58A9800DEE815 /* ViewController.m */,
 				D75D63231CF58A9800DEE815 /* Main.storyboard */,
 				D75D63261CF58A9800DEE815 /* Assets.xcassets */,
 				D75D63281CF58A9800DEE815 /* LaunchScreen.storyboard */,
@@ -195,6 +194,15 @@
 				D7D5E8E81CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m */,
 			);
 			path = CHTCollectionViewWaterfallLayout;
+			sourceTree = "<group>";
+		};
+		D7D5E8EA1CF9DA5800B0EE97 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				D7D5E8EB1CF9DA8700B0EE97 /* InfiniteCarouselDemoVC.h */,
+				D7D5E8EC1CF9DA8700B0EE97 /* InfiniteCarouselDemoVC.m */,
+			);
+			path = Demo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,8 +342,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D75D63501CF5991700DEE815 /* TTMInfiniteCarouselView.m in Sources */,
+				D7D5E8ED1CF9DA8700B0EE97 /* InfiniteCarouselDemoVC.m in Sources */,
 				D7D5E8E91CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m in Sources */,
-				D75D63221CF58A9800DEE815 /* ViewController.m in Sources */,
 				D75D631F1CF58A9800DEE815 /* AppDelegate.m in Sources */,
 				D75D631C1CF58A9800DEE815 /* main.m in Sources */,
 				D75D63561CF59DFC00DEE815 /* TTMInfiniteCarouselItem.m in Sources */,
