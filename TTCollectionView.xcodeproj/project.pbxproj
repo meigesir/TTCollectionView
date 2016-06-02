@@ -17,6 +17,10 @@
 		D75D63501CF5991700DEE815 /* TTMInfiniteCarouselView.m in Sources */ = {isa = PBXBuildFile; fileRef = D75D634F1CF5991700DEE815 /* TTMInfiniteCarouselView.m */; };
 		D75D63561CF59DFC00DEE815 /* TTMInfiniteCarouselItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D75D63541CF59DFC00DEE815 /* TTMInfiniteCarouselItem.m */; };
 		D75D63571CF59DFC00DEE815 /* TTMInfiniteCarouselItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = D75D63551CF59DFC00DEE815 /* TTMInfiniteCarouselItem.xib */; };
+		D7A2F8181D003F2000F2FB20 /* StretchyHeaderSectionHeaderCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D7A2F8161D003F2000F2FB20 /* StretchyHeaderSectionHeaderCollectionReusableView.m */; };
+		D7A2F8191D003F2000F2FB20 /* StretchyHeaderSectionHeaderCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D7A2F8171D003F2000F2FB20 /* StretchyHeaderSectionHeaderCollectionReusableView.xib */; };
+		D7A2F81D1D00530900F2FB20 /* tiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7A2F81B1D00530900F2FB20 /* tiger.jpg */; };
+		D7A2F81E1D00530900F2FB20 /* car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7A2F81C1D00530900F2FB20 /* car.jpg */; };
 		D7D5E8E91CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D5E8E81CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m */; };
 		D7D5E8F41CF9FB6800B0EE97 /* 1_750x300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7D5E8EF1CF9FB6800B0EE97 /* 1_750x300.jpg */; };
 		D7D5E8F51CF9FB6800B0EE97 /* 2_750x300.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D7D5E8F01CF9FB6800B0EE97 /* 2_750x300.jpg */; };
@@ -46,6 +50,8 @@
 		D7D5E9261CFA025800B0EE97 /* InfiniteCarouselDemoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D5E9251CFA025800B0EE97 /* InfiniteCarouselDemoVC.m */; };
 		D7D5E9291CFA028700B0EE97 /* WaterFallCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D5E9281CFA028700B0EE97 /* WaterFallCollectionViewCell.m */; };
 		D7D5E92C1CFA033500B0EE97 /* WaterFallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D5E92B1CFA033500B0EE97 /* WaterFallViewController.m */; };
+		D7F572BC1D0013EF00435D96 /* TTMStretchyHeaderCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F572BB1D0013EF00435D96 /* TTMStretchyHeaderCollectionViewLayout.m */; };
+		D7F572BF1D00196B00435D96 /* StretchyHeaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D7F572BE1D00196B00435D96 /* StretchyHeaderViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +91,11 @@
 		D75D63531CF59DFC00DEE815 /* TTMInfiniteCarouselItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMInfiniteCarouselItem.h; sourceTree = "<group>"; };
 		D75D63541CF59DFC00DEE815 /* TTMInfiniteCarouselItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMInfiniteCarouselItem.m; sourceTree = "<group>"; };
 		D75D63551CF59DFC00DEE815 /* TTMInfiniteCarouselItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTMInfiniteCarouselItem.xib; sourceTree = "<group>"; };
+		D7A2F8151D003F2000F2FB20 /* StretchyHeaderSectionHeaderCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StretchyHeaderSectionHeaderCollectionReusableView.h; sourceTree = "<group>"; };
+		D7A2F8161D003F2000F2FB20 /* StretchyHeaderSectionHeaderCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StretchyHeaderSectionHeaderCollectionReusableView.m; sourceTree = "<group>"; };
+		D7A2F8171D003F2000F2FB20 /* StretchyHeaderSectionHeaderCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StretchyHeaderSectionHeaderCollectionReusableView.xib; sourceTree = "<group>"; };
+		D7A2F81B1D00530900F2FB20 /* tiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tiger.jpg; sourceTree = "<group>"; };
+		D7A2F81C1D00530900F2FB20 /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car.jpg; sourceTree = "<group>"; };
 		D7D5E8E71CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTCollectionViewWaterfallLayout.h; sourceTree = "<group>"; };
 		D7D5E8E81CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTCollectionViewWaterfallLayout.m; sourceTree = "<group>"; };
 		D7D5E8EF1CF9FB6800B0EE97 /* 1_750x300.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1_750x300.jpg; sourceTree = "<group>"; };
@@ -118,6 +129,10 @@
 		D7D5E9281CFA028700B0EE97 /* WaterFallCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFallCollectionViewCell.m; sourceTree = "<group>"; };
 		D7D5E92A1CFA033500B0EE97 /* WaterFallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterFallViewController.h; sourceTree = "<group>"; };
 		D7D5E92B1CFA033500B0EE97 /* WaterFallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterFallViewController.m; sourceTree = "<group>"; };
+		D7F572BA1D0013EF00435D96 /* TTMStretchyHeaderCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMStretchyHeaderCollectionViewLayout.h; sourceTree = "<group>"; };
+		D7F572BB1D0013EF00435D96 /* TTMStretchyHeaderCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMStretchyHeaderCollectionViewLayout.m; sourceTree = "<group>"; };
+		D7F572BD1D00196B00435D96 /* StretchyHeaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StretchyHeaderViewController.h; sourceTree = "<group>"; };
+		D7F572BE1D00196B00435D96 /* StretchyHeaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StretchyHeaderViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,9 +184,10 @@
 			isa = PBXGroup;
 			children = (
 				D7D5E8EA1CF9DA5800B0EE97 /* Demo */,
-				D7D5E8E61CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout */,
 				D75D63581CF5B02500DEE815 /* Resources */,
+				D7D5E8E61CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout */,
 				D75D634D1CF5982900DEE815 /* InfiniteCarousel */,
+				D7F572B81D0010A200435D96 /* StretchyHeader */,
 				D75D631D1CF58A9800DEE815 /* AppDelegate.h */,
 				D75D631E1CF58A9800DEE815 /* AppDelegate.m */,
 				D75D63231CF58A9800DEE815 /* Main.storyboard */,
@@ -224,10 +240,20 @@
 		D75D63581CF5B02500DEE815 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D7A2F81A1D004D2700F2FB20 /* StretchyHeader */,
 				D7D5E8F91CF9FB7000B0EE97 /* WaterFall */,
 				D7D5E8EE1CF9FB6800B0EE97 /* InfiniteCarousel */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D7A2F81A1D004D2700F2FB20 /* StretchyHeader */ = {
+			isa = PBXGroup;
+			children = (
+				D7A2F81B1D00530900F2FB20 /* tiger.jpg */,
+				D7A2F81C1D00530900F2FB20 /* car.jpg */,
+			);
+			path = StretchyHeader;
 			sourceTree = "<group>";
 		};
 		D7D5E8E61CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout */ = {
@@ -242,6 +268,7 @@
 		D7D5E8EA1CF9DA5800B0EE97 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				D7F572B91D0010CD00435D96 /* StretchyHeader */,
 				D7D5E9231CFA025800B0EE97 /* InfiniteCarousel */,
 				D7D5E9221CFA024D00B0EE97 /* WaterFall */,
 			);
@@ -305,6 +332,27 @@
 				D7D5E9251CFA025800B0EE97 /* InfiniteCarouselDemoVC.m */,
 			);
 			path = InfiniteCarousel;
+			sourceTree = "<group>";
+		};
+		D7F572B81D0010A200435D96 /* StretchyHeader */ = {
+			isa = PBXGroup;
+			children = (
+				D7F572BA1D0013EF00435D96 /* TTMStretchyHeaderCollectionViewLayout.h */,
+				D7F572BB1D0013EF00435D96 /* TTMStretchyHeaderCollectionViewLayout.m */,
+			);
+			path = StretchyHeader;
+			sourceTree = "<group>";
+		};
+		D7F572B91D0010CD00435D96 /* StretchyHeader */ = {
+			isa = PBXGroup;
+			children = (
+				D7F572BD1D00196B00435D96 /* StretchyHeaderViewController.h */,
+				D7F572BE1D00196B00435D96 /* StretchyHeaderViewController.m */,
+				D7A2F8151D003F2000F2FB20 /* StretchyHeaderSectionHeaderCollectionReusableView.h */,
+				D7A2F8161D003F2000F2FB20 /* StretchyHeaderSectionHeaderCollectionReusableView.m */,
+				D7A2F8171D003F2000F2FB20 /* StretchyHeaderSectionHeaderCollectionReusableView.xib */,
+			);
+			path = StretchyHeader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,11 +470,14 @@
 				D7D5E91D1CFA012200B0EE97 /* 474X711.jpg in Resources */,
 				D7D5E9141CFA012200B0EE97 /* 460X460.jpg in Resources */,
 				D7D5E9191CFA012200B0EE97 /* 474X663.jpg in Resources */,
+				D7A2F81E1D00530900F2FB20 /* car.jpg in Resources */,
 				D7D5E91A1CFA012200B0EE97 /* 474X701.jpg in Resources */,
 				D7D5E8F51CF9FB6800B0EE97 /* 2_750x300.jpg in Resources */,
 				D75D63571CF59DFC00DEE815 /* TTMInfiniteCarouselItem.xib in Resources */,
 				D75D63251CF58A9800DEE815 /* Main.storyboard in Resources */,
+				D7A2F81D1D00530900F2FB20 /* tiger.jpg in Resources */,
 				D7D5E9171CFA012200B0EE97 /* 474X474.jpg in Resources */,
+				D7A2F8191D003F2000F2FB20 /* StretchyHeaderSectionHeaderCollectionReusableView.xib in Resources */,
 				D7D5E8F71CF9FB6800B0EE97 /* 4_750x300.jpg in Resources */,
 				D7D5E91F1CFA012200B0EE97 /* 474X754.jpg in Resources */,
 				D7D5E9151CFA012200B0EE97 /* 474X474-2.jpg in Resources */,
@@ -463,14 +514,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7A2F8181D003F2000F2FB20 /* StretchyHeaderSectionHeaderCollectionReusableView.m in Sources */,
 				D75D63501CF5991700DEE815 /* TTMInfiniteCarouselView.m in Sources */,
 				D7D5E8E91CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				D75D631F1CF58A9800DEE815 /* AppDelegate.m in Sources */,
 				D75D631C1CF58A9800DEE815 /* main.m in Sources */,
+				D7F572BC1D0013EF00435D96 /* TTMStretchyHeaderCollectionViewLayout.m in Sources */,
 				D75D63561CF59DFC00DEE815 /* TTMInfiniteCarouselItem.m in Sources */,
 				D7D5E92C1CFA033500B0EE97 /* WaterFallViewController.m in Sources */,
 				D7D5E9291CFA028700B0EE97 /* WaterFallCollectionViewCell.m in Sources */,
 				D7D5E9261CFA025800B0EE97 /* InfiniteCarouselDemoVC.m in Sources */,
+				D7F572BF1D00196B00435D96 /* StretchyHeaderViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
