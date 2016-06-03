@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vBT-4J-PRH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vBT-4J-PRH">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -22,12 +22,31 @@
             </objects>
             <point key="canvasLocation" x="-1669" y="95"/>
         </scene>
+        <!--SlideZoomIn-->
+        <scene sceneID="djH-Zz-I6E">
+            <objects>
+                <viewController id="aiN-b9-1rF" customClass="SlideZoomInViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Poz-w9-EHf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Asg-W1-94l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kd8-mk-u3d">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SlideZoomIn" id="qEJ-QL-sKc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8UU-6f-lrv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1187" y="1006"/>
+        </scene>
         <!--TT-->
         <scene sceneID="vYR-1V-nDA">
             <objects>
                 <tableViewController id="Re1-jq-yce" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="mJP-75-Az1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
@@ -139,6 +158,41 @@
                                             <segue destination="mn4-b3-5Sw" kind="show" id="8PC-wg-I5i"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="150" id="llG-WJ-0gQ">
+                                        <rect key="frame" x="0.0" y="514" width="600" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="llG-WJ-0gQ" id="jxs-0j-zAf">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="149.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OcY-DL-IAL" userLabel="SlideZoomIn">
+                                                    <rect key="frame" x="0.0" y="0.0" width="600" height="150"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SlideZoomIn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1a-VW-31y">
+                                                            <rect key="frame" x="216.5" y="57" width="167" height="36"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.60784313725490191" green="0.34901960784313724" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="w1a-VW-31y" firstAttribute="centerY" secondItem="OcY-DL-IAL" secondAttribute="centerY" id="VXa-Mp-RVD"/>
+                                                        <constraint firstItem="w1a-VW-31y" firstAttribute="centerX" secondItem="OcY-DL-IAL" secondAttribute="centerX" id="nFn-ei-a1l"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="OcY-DL-IAL" firstAttribute="centerY" secondItem="jxs-0j-zAf" secondAttribute="centerY" id="5gk-ix-amF"/>
+                                                <constraint firstItem="OcY-DL-IAL" firstAttribute="top" secondItem="jxs-0j-zAf" secondAttribute="topMargin" constant="-8" id="KH4-Bl-UkR"/>
+                                                <constraint firstItem="OcY-DL-IAL" firstAttribute="centerX" secondItem="jxs-0j-zAf" secondAttribute="centerX" id="S8I-W6-9tS"/>
+                                                <constraint firstItem="OcY-DL-IAL" firstAttribute="leading" secondItem="jxs-0j-zAf" secondAttribute="leadingMargin" constant="-8" id="xcE-gO-5hS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="aiN-b9-1rF" kind="show" id="y2o-31-ftf"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -148,6 +202,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="TT" id="VBd-Am-icY"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="800"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MA1-Zg-kNY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,7 +218,7 @@
                         <viewControllerLayoutGuide type="bottom" id="UKc-W4-Qq4"/>
                     </layoutGuides>
                     <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="pfh-Zt-ZF4">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </scrollView>
@@ -178,7 +234,7 @@
             <objects>
                 <viewController id="iqF-iI-ejz" customClass="WaterFallViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="gmp-fi-1Xe">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Anu-If-92B" customClass="CHTCollectionViewWaterfallLayout">
@@ -233,7 +289,7 @@
             <objects>
                 <viewController id="mn4-b3-5Sw" customClass="StretchyHeaderViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Lxg-4M-m9t">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="vAe-R0-62t" customClass="TTMStretchyHeaderCollectionViewLayout">

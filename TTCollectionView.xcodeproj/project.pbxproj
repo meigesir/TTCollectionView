@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D71CA66A1D01812A00C825B3 /* TTMSlideZoomInFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D71CA6691D01812A00C825B3 /* TTMSlideZoomInFlowLayout.m */; };
+		D71CA66E1D01896100C825B3 /* SlideZoomInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71CA66D1D01896100C825B3 /* SlideZoomInViewController.m */; };
+		D71CA6711D018D2D00C825B3 /* SlideZoomInCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D71CA6701D018D2D00C825B3 /* SlideZoomInCollectionViewCell.m */; };
+		D71CA6731D0192E200C825B3 /* SlideZoomInCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71CA6721D0192E200C825B3 /* SlideZoomInCollectionViewCell.xib */; };
 		D75D631C1CF58A9800DEE815 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D75D631B1CF58A9800DEE815 /* main.m */; };
 		D75D631F1CF58A9800DEE815 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D75D631E1CF58A9800DEE815 /* AppDelegate.m */; };
 		D75D63251CF58A9800DEE815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75D63231CF58A9800DEE815 /* Main.storyboard */; };
@@ -72,6 +76,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D71CA6681D01812A00C825B3 /* TTMSlideZoomInFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTMSlideZoomInFlowLayout.h; sourceTree = "<group>"; };
+		D71CA6691D01812A00C825B3 /* TTMSlideZoomInFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTMSlideZoomInFlowLayout.m; sourceTree = "<group>"; };
+		D71CA66C1D01896100C825B3 /* SlideZoomInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideZoomInViewController.h; sourceTree = "<group>"; };
+		D71CA66D1D01896100C825B3 /* SlideZoomInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideZoomInViewController.m; sourceTree = "<group>"; };
+		D71CA66F1D018D2D00C825B3 /* SlideZoomInCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideZoomInCollectionViewCell.h; sourceTree = "<group>"; };
+		D71CA6701D018D2D00C825B3 /* SlideZoomInCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideZoomInCollectionViewCell.m; sourceTree = "<group>"; };
+		D71CA6721D0192E200C825B3 /* SlideZoomInCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideZoomInCollectionViewCell.xib; sourceTree = "<group>"; };
 		D75D63171CF58A9800DEE815 /* TTCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75D631B1CF58A9800DEE815 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D75D631D1CF58A9800DEE815 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -160,6 +171,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D71CA6671D0180F900C825B3 /* SlideZoomIn */ = {
+			isa = PBXGroup;
+			children = (
+				D71CA6681D01812A00C825B3 /* TTMSlideZoomInFlowLayout.h */,
+				D71CA6691D01812A00C825B3 /* TTMSlideZoomInFlowLayout.m */,
+			);
+			path = SlideZoomIn;
+			sourceTree = "<group>";
+		};
+		D71CA66B1D01887C00C825B3 /* SlideZoomIn */ = {
+			isa = PBXGroup;
+			children = (
+				D71CA66C1D01896100C825B3 /* SlideZoomInViewController.h */,
+				D71CA66D1D01896100C825B3 /* SlideZoomInViewController.m */,
+				D71CA66F1D018D2D00C825B3 /* SlideZoomInCollectionViewCell.h */,
+				D71CA6701D018D2D00C825B3 /* SlideZoomInCollectionViewCell.m */,
+				D71CA6721D0192E200C825B3 /* SlideZoomInCollectionViewCell.xib */,
+			);
+			path = SlideZoomIn;
+			sourceTree = "<group>";
+		};
 		D75D630E1CF58A9800DEE815 = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				D7D5E8EA1CF9DA5800B0EE97 /* Demo */,
+				D71CA6671D0180F900C825B3 /* SlideZoomIn */,
 				D75D63581CF5B02500DEE815 /* Resources */,
 				D7D5E8E61CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout */,
 				D75D634D1CF5982900DEE815 /* InfiniteCarousel */,
@@ -268,6 +301,7 @@
 		D7D5E8EA1CF9DA5800B0EE97 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				D71CA66B1D01887C00C825B3 /* SlideZoomIn */,
 				D7F572B91D0010CD00435D96 /* StretchyHeader */,
 				D7D5E9231CFA025800B0EE97 /* InfiniteCarousel */,
 				D7D5E9221CFA024D00B0EE97 /* WaterFall */,
@@ -481,6 +515,7 @@
 				D7D5E8F71CF9FB6800B0EE97 /* 4_750x300.jpg in Resources */,
 				D7D5E91F1CFA012200B0EE97 /* 474X754.jpg in Resources */,
 				D7D5E9151CFA012200B0EE97 /* 474X474-2.jpg in Resources */,
+				D71CA6731D0192E200C825B3 /* SlideZoomInCollectionViewCell.xib in Resources */,
 				D7D5E91B1CFA012200B0EE97 /* 474X710.jpg in Resources */,
 				D7D5E9121CFA012200B0EE97 /* 446X666.jpg in Resources */,
 				D7D5E90E1CFA012200B0EE97 /* 300X768.jpg in Resources */,
@@ -519,12 +554,15 @@
 				D7D5E8E91CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				D75D631F1CF58A9800DEE815 /* AppDelegate.m in Sources */,
 				D75D631C1CF58A9800DEE815 /* main.m in Sources */,
+				D71CA66A1D01812A00C825B3 /* TTMSlideZoomInFlowLayout.m in Sources */,
 				D7F572BC1D0013EF00435D96 /* TTMStretchyHeaderCollectionViewLayout.m in Sources */,
 				D75D63561CF59DFC00DEE815 /* TTMInfiniteCarouselItem.m in Sources */,
 				D7D5E92C1CFA033500B0EE97 /* WaterFallViewController.m in Sources */,
 				D7D5E9291CFA028700B0EE97 /* WaterFallCollectionViewCell.m in Sources */,
 				D7D5E9261CFA025800B0EE97 /* InfiniteCarouselDemoVC.m in Sources */,
 				D7F572BF1D00196B00435D96 /* StretchyHeaderViewController.m in Sources */,
+				D71CA6711D018D2D00C825B3 /* SlideZoomInCollectionViewCell.m in Sources */,
+				D71CA66E1D01896100C825B3 /* SlideZoomInViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
