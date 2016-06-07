@@ -11,6 +11,8 @@
 		D71CA66E1D01896100C825B3 /* SlideZoomInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D71CA66D1D01896100C825B3 /* SlideZoomInViewController.m */; };
 		D71CA6711D018D2D00C825B3 /* SlideZoomInCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D71CA6701D018D2D00C825B3 /* SlideZoomInCollectionViewCell.m */; };
 		D71CA6731D0192E200C825B3 /* SlideZoomInCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D71CA6721D0192E200C825B3 /* SlideZoomInCollectionViewCell.xib */; };
+		D74FCDF51D06EC08000F6913 /* LXReorderableCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D74FCDF41D06EC08000F6913 /* LXReorderableCollectionViewFlowLayout.m */; };
+		D74FCDF91D06EC6C000F6913 /* ReorderCellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74FCDF81D06EC6C000F6913 /* ReorderCellViewController.m */; };
 		D75D631C1CF58A9800DEE815 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D75D631B1CF58A9800DEE815 /* main.m */; };
 		D75D631F1CF58A9800DEE815 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D75D631E1CF58A9800DEE815 /* AppDelegate.m */; };
 		D75D63251CF58A9800DEE815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D75D63231CF58A9800DEE815 /* Main.storyboard */; };
@@ -83,6 +85,10 @@
 		D71CA66F1D018D2D00C825B3 /* SlideZoomInCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideZoomInCollectionViewCell.h; sourceTree = "<group>"; };
 		D71CA6701D018D2D00C825B3 /* SlideZoomInCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideZoomInCollectionViewCell.m; sourceTree = "<group>"; };
 		D71CA6721D0192E200C825B3 /* SlideZoomInCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SlideZoomInCollectionViewCell.xib; sourceTree = "<group>"; };
+		D74FCDF31D06EC08000F6913 /* LXReorderableCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXReorderableCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		D74FCDF41D06EC08000F6913 /* LXReorderableCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXReorderableCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		D74FCDF71D06EC6C000F6913 /* ReorderCellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReorderCellViewController.h; sourceTree = "<group>"; };
+		D74FCDF81D06EC6C000F6913 /* ReorderCellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReorderCellViewController.m; sourceTree = "<group>"; };
 		D75D63171CF58A9800DEE815 /* TTCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TTCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75D631B1CF58A9800DEE815 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D75D631D1CF58A9800DEE815 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -192,6 +198,24 @@
 			path = SlideZoomIn;
 			sourceTree = "<group>";
 		};
+		D74FCDF21D06EC08000F6913 /* LXReorderableCollectionViewFlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				D74FCDF31D06EC08000F6913 /* LXReorderableCollectionViewFlowLayout.h */,
+				D74FCDF41D06EC08000F6913 /* LXReorderableCollectionViewFlowLayout.m */,
+			);
+			path = LXReorderableCollectionViewFlowLayout;
+			sourceTree = "<group>";
+		};
+		D74FCDF61D06EC50000F6913 /* ReorderCell */ = {
+			isa = PBXGroup;
+			children = (
+				D74FCDF71D06EC6C000F6913 /* ReorderCellViewController.h */,
+				D74FCDF81D06EC6C000F6913 /* ReorderCellViewController.m */,
+			);
+			path = ReorderCell;
+			sourceTree = "<group>";
+		};
 		D75D630E1CF58A9800DEE815 = {
 			isa = PBXGroup;
 			children = (
@@ -216,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				D7D5E8EA1CF9DA5800B0EE97 /* Demo */,
+				D74FCDF21D06EC08000F6913 /* LXReorderableCollectionViewFlowLayout */,
 				D71CA6671D0180F900C825B3 /* SlideZoomIn */,
 				D75D63581CF5B02500DEE815 /* Resources */,
 				D7D5E8E61CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout */,
@@ -301,6 +326,7 @@
 		D7D5E8EA1CF9DA5800B0EE97 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				D74FCDF61D06EC50000F6913 /* ReorderCell */,
 				D71CA66B1D01887C00C825B3 /* SlideZoomIn */,
 				D7F572B91D0010CD00435D96 /* StretchyHeader */,
 				D7D5E9231CFA025800B0EE97 /* InfiniteCarousel */,
@@ -549,6 +575,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D74FCDF51D06EC08000F6913 /* LXReorderableCollectionViewFlowLayout.m in Sources */,
 				D7A2F8181D003F2000F2FB20 /* StretchyHeaderSectionHeaderCollectionReusableView.m in Sources */,
 				D75D63501CF5991700DEE815 /* TTMInfiniteCarouselView.m in Sources */,
 				D7D5E8E91CF9D63100B0EE97 /* CHTCollectionViewWaterfallLayout.m in Sources */,
@@ -556,6 +583,7 @@
 				D75D631C1CF58A9800DEE815 /* main.m in Sources */,
 				D71CA66A1D01812A00C825B3 /* TTMSlideZoomInFlowLayout.m in Sources */,
 				D7F572BC1D0013EF00435D96 /* TTMStretchyHeaderCollectionViewLayout.m in Sources */,
+				D74FCDF91D06EC6C000F6913 /* ReorderCellViewController.m in Sources */,
 				D75D63561CF59DFC00DEE815 /* TTMInfiniteCarouselItem.m in Sources */,
 				D7D5E92C1CFA033500B0EE97 /* WaterFallViewController.m in Sources */,
 				D7D5E9291CFA028700B0EE97 /* WaterFallCollectionViewCell.m in Sources */,
