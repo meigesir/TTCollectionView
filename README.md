@@ -55,3 +55,6 @@ collectionView 自定义 layout 五种实现方式
 4. 在layoutAttributesForElementsInRect:中，判断如果是当前操作的item，Attributes的hidden设为YES，从而隐藏原有的item。
 5. invalidateLayoutIfNecessary，实现没有操作在item上面时不生效，及其相应的删除、插入操作，及其相应的委托方法。
 
+## License
+
+TTCollectionView is released under the MIT license. See LICENSE for details.
