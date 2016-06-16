@@ -62,7 +62,7 @@ collectionView 自定义 layout 五种实现方式
 ### 实现
 
 1. 添加长按手势，有可能手势冲突，比如iOS9添加长按手势实现移动元素，所以需要设置我们自定义长按手势优先级高(requireGestureRecognizerToFail:)。
-2. 长按手势开始时，基于原有item的frame创建view，添加正常、高亮时的截图，然后放到view到1.1呗；长按手势结束时，view缩放到正常大小，然后view设置nil，拖动结束；两次相应的委托调用。
+2. 长按手势开始时，基于原有item的frame创建view，添加正常、高亮时的截图，然后放大view到1.1倍；长按手势结束时，view缩放到正常大小，然后view设置nil，拖动结束；两次相应的委托调用。
 3. 拖动需要添加pan手势，拖动改变时，改变view的中心点即可。
 4. 在layoutAttributesForElementsInRect:中，判断如果是当前操作的item，Attributes的hidden设为YES，从而隐藏原有的item。
 5. invalidateLayoutIfNecessary，实现没有操作在item上面时不生效，及其相应的删除、插入操作，及其相应的委托方法。
